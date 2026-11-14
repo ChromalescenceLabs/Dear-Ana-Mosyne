@@ -38,6 +38,7 @@ texture = SubResource("GradientTexture2D_raa7b")
 
 [node name="Cannon" parent="." unique_id=768458813 instance=ExtResource("1_gxdbn")]
 position = Vector2(328, 370)
+rotation = -3.1415927
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=1801543114]
 
@@ -49,6 +50,7 @@ position = Vector2(46, 360.5)
 shape = SubResource("RectangleShape2D_cuu35")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1942388795]
+visible = false
 position = Vector2(43, 358)
 scale = Vector2(0.859375, 5.78125)
 texture = ExtResource("2_0g6pj")
