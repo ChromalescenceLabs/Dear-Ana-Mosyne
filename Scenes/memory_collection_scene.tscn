@@ -1,43 +1,68 @@
 [gd_scene format=3 uid="uid://do2byq3wg0a3x"]
 
 [ext_resource type="PackedScene" uid="uid://bv4mpfhwatygv" path="res://Scenes/cannon.tscn" id="1_gxdbn"]
+[ext_resource type="Texture2D" uid="uid://cb7fehrp4pkkx" path="res://Assets/BG.png" id="1_i501o"]
 [ext_resource type="Script" uid="uid://cslggrmh182kk" path="res://Scripts/spawn_pos.gd" id="2_0g6pj"]
-
-[sub_resource type="Gradient" id="Gradient_xk8ji"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.7766483, 0.5289505, 0.7977031, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_cuu35"]
-gradient = SubResource("Gradient_xk8ji")
-
-[sub_resource type="Gradient" id="Gradient_gxdbn"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.27129278, 0.70733774, 0.82789123, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_raa7b"]
-gradient = SubResource("Gradient_gxdbn")
+[ext_resource type="Texture2D" uid="uid://bfqvisf28sgrr" path="res://Assets/progress-bar-frame.png" id="2_8x4jn"]
+[ext_resource type="Texture2D" uid="uid://cpiu8tgtnfsbq" path="res://Assets/progress-bar-circle.png" id="3_bva5q"]
+[ext_resource type="Script" uid="uid://7shhtcctloi7" path="res://Scripts/cannoncooldown_progress_bar.gd" id="4_bva5q"]
+[ext_resource type="Texture2D" uid="uid://b5dcyg1elc3m5" path="res://Assets/Border.png" id="6_4rd3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ittll"]
 size = Vector2(158.66335, 21)
 
+[sub_resource type="Animation" id="Animation_8x4jn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [100.0]
+}
+
+[sub_resource type="Animation" id="Animation_bva5q"]
+resource_name = "cooldown"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [100.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i501o"]
+_data = {
+&"RESET": SubResource("Animation_8x4jn"),
+&"cooldown": SubResource("Animation_bva5q")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cuu35"]
+size = Vector2(37, 741)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raa7b"]
+size = Vector2(667, 55)
+
 [node name="MemoryCollectionScene" type="Node2D" unique_id=1048546398]
 
-[node name="CannonZoneBG" type="TextureRect" parent="." unique_id=1738843378]
-offset_left = -21.0
-offset_top = -20.0
-offset_right = 663.0
-offset_bottom = 736.0
-texture = SubResource("GradientTexture2D_cuu35")
-
-[node name="MemoryZoneBG" type="TextureRect" parent="." unique_id=694197796]
-offset_left = 660.0
-offset_top = -20.0
-offset_right = 1303.0
-offset_bottom = 736.0
-texture = SubResource("GradientTexture2D_raa7b")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1421903101]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_i501o")
 
 [node name="Cannon" parent="." unique_id=768458813 instance=ExtResource("1_gxdbn")]
 position = Vector2(328, 370)
+rotation = -3.1415927
 
 [node name="SpawnPos" type="Node2D" parent="." unique_id=1007356516]
 script = ExtResource("2_0g6pj")
@@ -70,8 +95,51 @@ scale = Vector2(1.5081238, 1.7097083)
 position = Vector2(0, -34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end" unique_id=593770913]
-position = Vector2(972.5, 0.5)
+position = Vector2(975.99994, -26)
 scale = Vector2(4.040001, 1)
 shape = SubResource("RectangleShape2D_ittll")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=899647301]
+visible = false
+offset_left = 1205.0
+offset_top = 20.00003
+offset_right = 1333.0
+offset_bottom = 150.56003
+scale = Vector2(0.42, 0.42)
+value = 100.0
+fill_mode = 4
+texture_over = ExtResource("2_8x4jn")
+texture_progress = ExtResource("3_bva5q")
+script = ExtResource("4_bva5q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ProgressBar" unique_id=1437097555]
+libraries/ = SubResource("AnimationLibrary_i501o")
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=1801543114]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Boundaries" unique_id=1341391940]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D" unique_id=1861125659]
+position = Vector2(8.5, 360.5)
+shape = SubResource("RectangleShape2D_cuu35")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="Boundaries" unique_id=2137637533]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D2" unique_id=1884180722]
+position = Vector2(323.5, 7)
+shape = SubResource("RectangleShape2D_raa7b")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="Boundaries" unique_id=1087334725]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D3" unique_id=1794083878]
+position = Vector2(323.5, 716.5)
+shape = SubResource("RectangleShape2D_raa7b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Boundaries" unique_id=266237422]
+texture = ExtResource("6_4rd3t")
+centered = false
 
 [connection signal="timeout" from="Spawning Timer" to="SpawnPos" method="_on_spawning_timer_timeout"]

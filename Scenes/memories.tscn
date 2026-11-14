@@ -8,6 +8,7 @@ radius = 90.824005
 
 [node name="Memories" type="CharacterBody2D" unique_id=1453464693]
 scale = Vector2(0.68, 0.68)
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=736119046]
 scale = Vector2(0.105, 0.105)
