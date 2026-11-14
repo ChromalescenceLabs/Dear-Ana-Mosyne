@@ -17,6 +17,9 @@ colors = PackedColorArray(0.27129278, 0.70733774, 0.82789123, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_raa7b"]
 gradient = SubResource("Gradient_gxdbn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ittll"]
+size = Vector2(158.66335, 21)
+
 [node name="MemoryCollectionScene" type="Node2D" unique_id=1048546398]
 
 [node name="CannonZoneBG" type="TextureRect" parent="." unique_id=1738843378]
@@ -62,6 +65,13 @@ scale = Vector2(1.5081238, 1.7097083)
 [node name="memoryCont" type="Node2D" parent="." unique_id=317607912]
 
 [node name="Spawning Timer" type="Timer" parent="." unique_id=1965397274]
-wait_time = 0.3
+
+[node name="end" type="Area2D" parent="." unique_id=1943374461]
+position = Vector2(0, -34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end" unique_id=593770913]
+position = Vector2(972.5, 0.5)
+scale = Vector2(4.040001, 1)
+shape = SubResource("RectangleShape2D_ittll")
 
 [connection signal="timeout" from="Spawning Timer" to="SpawnPos" method="_on_spawning_timer_timeout"]

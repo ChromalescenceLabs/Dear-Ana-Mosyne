@@ -1,2 +1,9 @@
 res://Scripts/spawn_pos.gd
 res://Scenes/memories.tscn
+res://Scenes/sprite_2d.gd
+res://Scenes/memory_collection_scene.tscn
+res://Scripts/Main Menu/texture_button.gd
+res://Scripts/Main Menu/quit.gd
+res://Scripts/scene_loader.gd
+res://Scripts/loading_screen_fade.gd
+res://Scripts/sprite_2d.gd
