@@ -14,4 +14,5 @@ texture = ExtResource("1_qayxd")
 
 [node name="CannonRaycast" parent="Texture" unique_id=1416354037 instance=ExtResource("2_qlvt6")]
 rotation = -1.5707964
+collide_with_areas = true
 color = Color(1, 1, 1, 1)

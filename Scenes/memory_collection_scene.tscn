@@ -19,6 +19,9 @@ gradient = SubResource("Gradient_gxdbn")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cuu35"]
 size = Vector2(31, 741)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raa7b"]
+size = Vector2(667, 20)
+
 [node name="MemoryCollectionScene" type="Node2D" unique_id=1048546398]
 
 [node name="CannonZoneBG" type="TextureRect" parent="." unique_id=1738843378]
@@ -41,9 +44,23 @@ rotation = -3.1415927
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=1801543114]
 
-[node name="StaticBody2D" type="RigidBody2D" parent="." unique_id=1341391940]
+[node name="RigidBody2D" type="RigidBody2D" parent="Boundaries" unique_id=1341391940]
 gravity_scale = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1861125659]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D" unique_id=1861125659]
 position = Vector2(5.5, 360.5)
 shape = SubResource("RectangleShape2D_cuu35")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="Boundaries" unique_id=2137637533]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D2" unique_id=1884180722]
+position = Vector2(323.5, 0)
+shape = SubResource("RectangleShape2D_raa7b")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="Boundaries" unique_id=1087334725]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RigidBody2D3" unique_id=1794083878]
+position = Vector2(323.5, 719)
+shape = SubResource("RectangleShape2D_raa7b")

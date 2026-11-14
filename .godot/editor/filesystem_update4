@@ -4,3 +4,5 @@ res://Scripts/cannon_raycast.gd
 res://Scenes/cannon_raycast.tscn
 res://Scripts/cannon.gd
 res://Scripts/raycast_line.gd
+res://Scenes/bullet.tscn
+res://Scripts/bullet.gd
