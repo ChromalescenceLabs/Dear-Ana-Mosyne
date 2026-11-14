@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://do2byq3wg0a3x"]
 
 [ext_resource type="PackedScene" uid="uid://bv4mpfhwatygv" path="res://Scenes/cannon.tscn" id="1_gxdbn"]
+[ext_resource type="Script" uid="uid://cslggrmh182kk" path="res://Scripts/spawn_pos.gd" id="2_0g6pj"]
 
 [sub_resource type="Gradient" id="Gradient_xk8ji"]
 offsets = PackedFloat32Array(0)
@@ -34,3 +35,33 @@ texture = SubResource("GradientTexture2D_raa7b")
 
 [node name="Cannon" parent="." unique_id=768458813 instance=ExtResource("1_gxdbn")]
 position = Vector2(328, 370)
+
+[node name="SpawnPos" type="Node2D" parent="." unique_id=1007356516]
+script = ExtResource("2_0g6pj")
+
+[node name="Position" type="Marker2D" parent="SpawnPos" unique_id=1107842126]
+position = Vector2(705, 755)
+scale = Vector2(1.5081238, 1.7097083)
+
+[node name="Position3" type="Marker2D" parent="SpawnPos" unique_id=60117281]
+position = Vector2(842.08124, 755)
+scale = Vector2(1.5081238, 1.7097083)
+
+[node name="Position5" type="Marker2D" parent="SpawnPos" unique_id=1480694091]
+position = Vector2(976.08124, 755)
+scale = Vector2(1.5081238, 1.7097083)
+
+[node name="Position7" type="Marker2D" parent="SpawnPos" unique_id=1044189201]
+position = Vector2(1113.0813, 755.09705)
+scale = Vector2(1.5081238, 1.7097083)
+
+[node name="Position9" type="Marker2D" parent="SpawnPos" unique_id=978259653]
+position = Vector2(1252.0814, 755.09705)
+scale = Vector2(1.5081238, 1.7097083)
+
+[node name="memoryCont" type="Node2D" parent="." unique_id=317607912]
+
+[node name="Spawning Timer" type="Timer" parent="." unique_id=1965397274]
+wait_time = 0.3
+
+[connection signal="timeout" from="Spawning Timer" to="SpawnPos" method="_on_spawning_timer_timeout"]

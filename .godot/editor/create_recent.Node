@@ -1,5 +1,11 @@
+Area2D
+CharacterBody2D
+Node2D
+Timer
+Marker2D
+CollisionShape2D
+Sprite2D
 RayCast2D
 TextureRect
 ColorRect
 Line2D
-Sprite2D
