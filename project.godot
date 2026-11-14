@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneLoader="*uid://by3ri4vxondjc"
+GlobalVars="*uid://d2ybnqoxsaijr"
 
 [dialogue_manager]
 

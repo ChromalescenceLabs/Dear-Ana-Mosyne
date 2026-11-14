@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://btqrp1etnikkv"]
+
+[ext_resource type="Script" uid="uid://b03trremhsh38" path="res://Scripts/photo_button.gd" id="1_mbnxn"]
+
+[sub_resource type="Gradient" id="Gradient_kbeuy"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cuu35"]
+gradient = SubResource("Gradient_kbeuy")
+
+[sub_resource type="Animation" id="Animation_mbnxn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fopph"]
+resource_name = "hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.195, 1.195)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idrh1"]
+_data = {
+&"RESET": SubResource("Animation_mbnxn"),
+&"hover": SubResource("Animation_fopph")
+}
+
+[node name="PhotoButton" type="TextureRect" unique_id=1090356824]
+offset_left = 1138.0
+offset_top = 576.0
+offset_right = 1256.0
+offset_bottom = 694.0
+rotation = 0.2635447
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_cuu35")
+script = ExtResource("1_mbnxn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=796073550]
+libraries/ = SubResource("AnimationLibrary_idrh1")
+speed_scale = 3.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
