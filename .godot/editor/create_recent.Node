@@ -1,3 +1,5 @@
+Sprite2D
+TextureRect
 AnimationPlayer
 TextureProgressBar
 ProgressBar
@@ -5,11 +7,8 @@ Timer
 VisibleOnScreenNotifier2D
 CollisionShape2D
 RigidBody2D
-Sprite2D
 CharacterBody2D
 Line2D
 Control
-TextureRect
 StaticBody2D
 Node2D
-RayCast2D

@@ -11,6 +11,9 @@ var collisions := 0:
 
 func _ready() -> void:
 	velocity = Vector2(-200, -200).normalized() * speed
+
+func _process(delta: float) -> void:
+	rotation += delta * 3.5
 	
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.RIGHT.rotated(rotation_num)
@@ -19,6 +22,7 @@ func _physics_process(delta: float) -> void:
 		velocity = direction * speed
 	if collision: 
 		collided = true
+		collisions += 1
 		velocity = velocity.bounce(collision.get_normal())
 		
 

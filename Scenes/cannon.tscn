@@ -9,11 +9,12 @@ script = ExtResource("1_3uv2y")
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=596690875]
 rotation = 1.5707964
-scale = Vector2(1, 0.97)
+scale = Vector2(0.2, 0.195)
 texture = ExtResource("1_qayxd")
 
 [node name="CannonRaycast" parent="Texture" unique_id=1416354037 instance=ExtResource("2_qlvt6")]
 rotation = -1.5707964
+scale = Vector2(4.74, 4.74)
 collide_with_areas = true
 color = Color(1, 1, 1, 1)
 
