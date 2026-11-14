@@ -101,6 +101,7 @@ grow_vertical = 2
 libraries/ = SubResource("AnimationLibrary_t3us6")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1636651872]
+visible = false
 offset_left = -196.0
 offset_top = 215.0
 offset_right = 1535.0
