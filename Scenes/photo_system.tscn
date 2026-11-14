@@ -89,6 +89,7 @@ _data = {
 }
 
 [node name="PhotoSystem" type="Node2D" unique_id=10896712]
+process_mode = 3
 script = ExtResource("1_mj5k5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1539239668]

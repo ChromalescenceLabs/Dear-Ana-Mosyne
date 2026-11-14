@@ -17,4 +17,5 @@ func _on_open_pic() -> void:
 		ana_s_photo.pic.visible = false
 		animation_player.play_backwards("enter")
 		await animation_player.animation_finished
+		ana_s_photo.pic.visible = true
 		
