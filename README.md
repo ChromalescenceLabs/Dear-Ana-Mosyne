@@ -40,4 +40,5 @@ You shoot the neurons into the memory orbs until her photo slowly gets less blur
 - **SPECIAL MENTIONS:** Hack Club, and the Haven Orgs
 
 ## Screenshots
-*TBA*
+<img width="1277" height="721" alt="image" src="https://github.com/user-attachments/assets/76b05af4-2c20-4203-8562-a47879d89ec5" />
+<img width="1275" height="711" alt="image" src="https://github.com/user-attachments/assets/36cdd70b-ae11-4e42-97e5-eb2aaec84177" />
