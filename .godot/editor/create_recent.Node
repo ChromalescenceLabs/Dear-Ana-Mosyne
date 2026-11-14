@@ -1,3 +1,5 @@
+TextureRect
+AnimationPlayer
 ColorRect
 Control
 ParallaxLayer
@@ -5,20 +7,8 @@ ParallaxBackground
 Parallax2D
 Sprite2D
 CanvasLayer
-TextureRect
 Button
-ColorRect
 TextureButton
-AnimationPlayer
-CanvasModulate
-Node2D
-TextureRect
-CanvasLayer
 Camera2D
-TextureButton
-Sprite2D
-Parallax2D
 Node2D
 CollisionShape2D
-Area2D
-CharacterBody2D

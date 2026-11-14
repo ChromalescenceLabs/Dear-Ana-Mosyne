@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cdatjfkbc2kt1"
+path="res://.godot/imported/First Cutscene.dialogue-0070a02e79fda480b71702eac7387511.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogue/First Cutscene.dialogue"
+dest_files=["res://.godot/imported/First Cutscene.dialogue-0070a02e79fda480b71702eac7387511.tres"]
+
+[params]
+
+defaults=true
