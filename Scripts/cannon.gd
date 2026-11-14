@@ -1,6 +1,7 @@
 extends Node2D
 
 var mouse_pos
+@onready var cannon_raycast: RayCast2D = $Texture/CannonRaycast
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"): aim()
@@ -13,7 +14,6 @@ func _process(_delta: float) -> void:
 	look_at_mouse()
 		
 func look_at_mouse() -> void:
-	print(rotation_degrees)
 	mouse_pos = get_local_mouse_position()
 	rotation += mouse_pos.angle() * 0.1
 	if (rotation_degrees > -90.0) or (rotation_degrees < -270.0):
@@ -24,6 +24,8 @@ func look_at_mouse() -> void:
 
 func aim() -> void:
 	set_process(true)
+	cannon_raycast.modulate.a = 1
 
 func unaim() -> void:
 	set_process(false)
+	cannon_raycast.modulate.a = 0
