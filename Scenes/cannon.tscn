@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://bv4mpfhwatygv"]
 
+[ext_resource type="Texture2D" uid="uid://bj6q354s5p46" path="res://Assets/Cannon.png" id="1_qayxd"]
+
 [node name="Cannon" type="Node2D" unique_id=768458813]
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=596690875]
+scale = Vector2(1, 0.97)
+texture = ExtResource("1_qayxd")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1827751125]
