@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://duy3xpqtjjl7k"]
 
-[ext_resource type="Script" uid="uid://n2aeq36tfo0g" path="res://Scripts/Main Menu/buttons.gd" id="1_tbdrc"]
 [ext_resource type="Texture2D" uid="uid://cno1yscc5ewi" path="res://Assets/Background_.png" id="2_vuees"]
 [ext_resource type="Texture2D" uid="uid://dcn34w8xrwa5y" path="res://Assets/Window_.png" id="3_3hb06"]
 [ext_resource type="Texture2D" uid="uid://bcbqvp505engv" path="res://Assets/Title.png" id="4_ns28u"]
@@ -11,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ckcrocliml22c" path="res://Scripts/Main Menu/texture_button.gd" id="9_s8c0c"]
 [ext_resource type="Texture2D" uid="uid://b1el1obx07w7b" path="res://Assets/Quit.png" id="10_jgydl"]
 [ext_resource type="Script" uid="uid://nx7fbfvbwnps" path="res://Scripts/Main Menu/quit.gd" id="11_p2sjk"]
+[ext_resource type="Script" uid="uid://c2c13o5ubiscw" path="res://Scripts/Main Menu/camera_2d.gd" id="11_tbdrc"]
 
 [node name="Buttons" type="Control" unique_id=1158101911]
 layout_mode = 3
@@ -19,47 +19,52 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tbdrc")
 
 [node name="Parallax" type="Node2D" parent="." unique_id=1915095204]
+position = Vector2(-67.00001, -32.000004)
+scale = Vector2(1.107038, 1.107038)
 
-[node name="Parallax2D" type="Parallax2D" parent="Parallax" unique_id=219704159]
+[node name="CanvasLayer" type="CanvasLayer" parent="Parallax" unique_id=1772029104]
+layer = -1
 
-[node name="Bg" type="Sprite2D" parent="Parallax/Parallax2D" unique_id=631537992]
+[node name="Parallax2D" type="Parallax2D" parent="Parallax/CanvasLayer" unique_id=219704159]
+scale = Vector2(1.1070381, 1.1070381)
+scroll_scale = Vector2(2, 2)
+
+[node name="Bg" type="Sprite2D" parent="Parallax/CanvasLayer/Parallax2D" unique_id=631537992]
+scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("2_vuees")
 centered = false
 
-[node name="Parallax2D2" type="Parallax2D" parent="Parallax" unique_id=1195653691]
+[node name="Parallax2D6" type="Parallax2D" parent="Parallax/CanvasLayer" unique_id=760439005]
+scale = Vector2(1.107038, 1.107038)
+scroll_scale = Vector2(2, 2)
 
-[node name="Window" type="Sprite2D" parent="Parallax/Parallax2D2" unique_id=423768309]
-texture = ExtResource("3_3hb06")
+[node name="fire" type="Sprite2D" parent="Parallax/CanvasLayer/Parallax2D6" unique_id=879633107]
+position = Vector2(927, 138.99998)
+scale = Vector2(0.869807, 0.869807)
+texture = ExtResource("6_nl2gc")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Parallax" unique_id=844233074]
+scale = Vector2(1.0000002, 1.0000002)
+
+[node name="light" type="Sprite2D" parent="Parallax/Parallax2D4" unique_id=493011068]
+position = Vector2(55.101997, 35.229145)
+scale = Vector2(0.8965399, 0.8965399)
+texture = ExtResource("5_ef6yq")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="Parallax" unique_id=429664169]
 
 [node name="Ttitle" type="Sprite2D" parent="Parallax/Parallax2D3" unique_id=870859227]
-position = Vector2(0, -118.99999)
+position = Vector2(51.4888, -118.999985)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_ns28u")
 centered = false
 
-[node name="Parallax2D4" type="Parallax2D" parent="Parallax" unique_id=844233074]
-
-[node name="light" type="Sprite2D" parent="Parallax/Parallax2D4" unique_id=493011068]
-position = Vector2(-6.9999995, -114)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("5_ef6yq")
-centered = false
-
-[node name="Parallax2D6" type="Parallax2D" parent="Parallax" unique_id=760439005]
-
-[node name="fire" type="Sprite2D" parent="Parallax/Parallax2D6" unique_id=879633107]
-position = Vector2(927, 138.99998)
-scale = Vector2(0.685, 0.685)
-texture = ExtResource("6_nl2gc")
-
 [node name="Parallax2D5" type="Parallax2D" parent="Parallax" unique_id=2060325826]
-visible = false
+scroll_scale = Vector2(0.66, 0.66)
+scroll_offset = Vector2(57.811966, 26.19603)
 
 [node name="flower" type="Sprite2D" parent="Parallax/Parallax2D5" unique_id=1967707912]
 position = Vector2(517, -85)
@@ -67,28 +72,44 @@ scale = Vector2(0.505, 0.505)
 texture = ExtResource("7_8e8p5")
 centered = false
 
-[node name="Play" type="TextureButton" parent="." unique_id=14141440]
+[node name="play" type="TextureButton" parent="." unique_id=1001622815]
 layout_mode = 0
-offset_left = -36.0
-offset_top = -20.0
-offset_right = 1244.0
-offset_bottom = 700.0
+offset_left = 250.0
+offset_top = 341.0
+offset_right = 389.0
+offset_bottom = 456.0
+action_mode = 0
+keep_pressed_outside = true
 texture_normal = ExtResource("8_w2mqo")
+texture_pressed = ExtResource("8_w2mqo")
+texture_hover = ExtResource("8_w2mqo")
 script = ExtResource("9_s8c0c")
 
-[node name="quit" type="TextureButton" parent="." unique_id=523971730]
+[node name="quit" type="TextureButton" parent="." unique_id=1014795007]
 layout_mode = 0
-offset_left = -36.0
-offset_top = -20.0
-offset_right = 1244.0
-offset_bottom = 700.0
+offset_left = 232.0
+offset_top = 427.0
+offset_right = 382.0
+offset_bottom = 552.0
 texture_normal = ExtResource("10_jgydl")
+texture_pressed = ExtResource("8_w2mqo")
+texture_hover = ExtResource("10_jgydl")
 script = ExtResource("11_p2sjk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1717489087]
+layer = -1
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer" unique_id=2069460773]
 anchor_mode = 0
+script = ExtResource("11_tbdrc")
 
-[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[node name="Parallax2D2" type="Parallax2D" parent="CanvasLayer" unique_id=1195653691]
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/Parallax2D2" unique_id=805750819]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("3_3hb06")
+
+[connection signal="pressed" from="play" to="play" method="_on_pressed"]
 [connection signal="pressed" from="quit" to="quit" method="_on_pressed"]
