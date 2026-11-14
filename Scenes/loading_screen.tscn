@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://bnuk6xew2do5r"]
 
+[ext_resource type="Script" uid="uid://cna6fo8mwv0ek" path="res://Scripts/loading_screen.gd" id="1_nfm0g"]
+[ext_resource type="Shader" uid="uid://bgf34a1405gfq" path="res://loading_screen.gdshader" id="2_fayou"]
+[ext_resource type="Texture2D" uid="uid://pxy0gwalgxyx" path="res://Assets/background .png" id="3_1godw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ullcx"]
+shader = ExtResource("2_fayou")
+shader_parameter/speed = 0.1
+
 [node name="loading screen" type="Node2D" unique_id=1229804554]
+script = ExtResource("1_nfm0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1133528493]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ullcx")
+texture = ExtResource("3_1godw")
+centered = false
