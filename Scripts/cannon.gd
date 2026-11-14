@@ -8,7 +8,7 @@ const BULLET = preload("uid://tgcfiha2l6xl")
 @onready var progress_bar: TextureProgressBar = $"../ProgressBar"
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Click"): aim()
+	if event.is_action_pressed("Click") and not GlobalVars.mouse_occupied: aim()
 	elif event.is_action_released("Click"): unaim()
 	
 	if is_clicked:

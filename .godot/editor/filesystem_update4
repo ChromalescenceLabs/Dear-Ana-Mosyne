@@ -1,7 +1,7 @@
-res://Scenes/memories.tscn
-res://Scenes/bullet.tscn
-res://Scripts/bullet.gd
-res://Scripts/sprite_2d.gd
+res://Scenes/photo_system.tscn
+res://Scripts/Shaders/photo_system.gdshader
+res://Scenes/ana's_photo.tscn
+res://Scripts/photo_system.gd
+res://Scripts/photo_button.gd
+res://Scripts/ana's_photo.gd
 res://Scenes/memory_collection_scene.tscn
-res://Scripts/spawn_pos.gd
-res://Scripts/memories.gd
