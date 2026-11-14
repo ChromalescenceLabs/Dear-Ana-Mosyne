@@ -14,6 +14,10 @@ config/name="Dear Ana Mosyne,"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneLoader="*uid://by3ri4vxondjc"
+
 [display]
 
 window/size/viewport_width=1280
@@ -30,7 +34,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 folder_colors={
 "res://Assets/": "pink",
 "res://Scenes/": "red",
-"res://Scripts/": "green"
+"res://Scripts/": "purple"
 }
 
 [input]
