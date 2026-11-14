@@ -13,5 +13,6 @@ func _on_tree_entered() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Bullet:
 		get_parent().delete.emit()
+		GlobalVars.pic_modulate -= 5
 		body.queue_free()
 		get_parent().queue_free()

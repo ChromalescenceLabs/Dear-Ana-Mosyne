@@ -48,6 +48,7 @@ libraries/ = SubResource("AnimationLibrary_fq71u")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=86003706]
 modulate = Color(1, 1, 1, 0)
+z_index = 4096
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
