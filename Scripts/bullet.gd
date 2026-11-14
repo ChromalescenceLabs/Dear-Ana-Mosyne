@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Bullet extends CharacterBody2D
 
 @onready var visible_on_screen_notifier_2d: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
 @export var speed := 500.0

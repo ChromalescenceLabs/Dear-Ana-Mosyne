@@ -1,3 +1,56 @@
 [gd_scene format=3 uid="uid://bwpdpmhkdlpbl"]
 
-[node name="Ana\'s Photo" type="Node2D" unique_id=271909667]
+[ext_resource type="Texture2D" uid="uid://b8d0gup47vol7" path="res://Assets/windflower_.png" id="1_ixqqx"]
+[ext_resource type="Script" uid="uid://dbm8bn8f1eh76" path="res://Scripts/ana's_photo.gd" id="1_sgp0q"]
+[ext_resource type="Shader" uid="uid://b7m70vlpg2hcq" path="res://Scripts/Shaders/photo_system.gdshader" id="2_b2r61"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuu35"]
+shader = ExtResource("2_b2r61")
+shader_parameter/blur_amount = 4.3050002044875
+
+[node name="Ana\'s Photo" type="Control" unique_id=187346583]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sgp0q")
+
+[node name="Pic" type="TextureRect" parent="." unique_id=1468515166]
+layout_mode = 0
+offset_left = -252.99998
+offset_top = -339.0
+offset_right = 1283.0
+offset_bottom = 1709.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_ixqqx")
+
+[node name="ColorRect" type="ColorRect" parent="Pic" unique_id=1625743347]
+material = SubResource("ShaderMaterial_cuu35")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Obscurities" type="Node2D" parent="." unique_id=150079573]
+
+[node name="TL" type="ColorRect" parent="Obscurities" unique_id=1917289873]
+offset_left = -253.0
+offset_top = -339.0
+color = Color(0, 0, 0, 1)
+
+[node name="BL" type="ColorRect" parent="Obscurities" unique_id=2041596297]
+offset_left = -253.0
+offset_top = -2.0
+offset_bottom = 337.0
+color = Color(0, 0, 0, 1)
+
+[node name="TR" type="ColorRect" parent="Obscurities" unique_id=1503465017]
+offset_top = -339.0
+offset_right = 254.0
+color = Color(0, 0, 0, 1)
+
+[node name="BR" type="ColorRect" parent="Obscurities" unique_id=1746522760]
+offset_top = -2.0
+offset_right = 254.0
+offset_bottom = 337.0
+color = Color(0, 0, 0, 1)

@@ -21,6 +21,7 @@ func spawmEnemy():
 	
 	memory_cont.add_child(memoryInstance)
 	memoryInstance.global_position = spawn[index].global_position
+	memoryInstance.delete.connect(decrease_amt)
 	
 	for child in memoryInstance.get_children():
 		if child is Area2D:
@@ -35,6 +36,9 @@ func memoryEnter(area: Area2D, child):
 		memoryAmt -= 1
 	else:
 		inArea = false
+
+func decrease_amt():
+	memoryAmt -= 1
 
 func _on_spawning_timer_timeout() -> void:
 	if memoryAmt < 5:
