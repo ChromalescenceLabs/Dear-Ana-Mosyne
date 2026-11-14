@@ -3,3 +3,4 @@ res://Scripts/Shaders/photo_system.gdshader
 res://Scripts/ana's_photo.gd
 res://Scenes/end.tscn
 res://Scripts/end.gd
+res://Scripts/GlobalVars.gd
