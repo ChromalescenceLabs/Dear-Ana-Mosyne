@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://6foy2hiyo702"]
+
+[ext_resource type="Script" uid="uid://cbjfdn1g8e1vp" path="res://Scripts/cannon_raycast.gd" id="1_orrb2"]
+
+[node name="CannonRaycast" type="RayCast2D" unique_id=1416354037]
+target_position = Vector2(1400, 0)
+script = ExtResource("1_orrb2")

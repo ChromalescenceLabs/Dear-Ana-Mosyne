@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://bv4mpfhwatygv"]
 
+[ext_resource type="Script" uid="uid://6fof5u18yhwm" path="res://Scripts/cannon.gd" id="1_3uv2y"]
 [ext_resource type="Texture2D" uid="uid://bj6q354s5p46" path="res://Assets/Cannon.png" id="1_qayxd"]
+[ext_resource type="PackedScene" uid="uid://6foy2hiyo702" path="res://Scenes/cannon_raycast.tscn" id="2_qlvt6"]
 
 [node name="Cannon" type="Node2D" unique_id=768458813]
+script = ExtResource("1_3uv2y")
 
 [node name="Texture" type="Sprite2D" parent="." unique_id=596690875]
+rotation = -1.5707964
 scale = Vector2(1, 0.97)
 texture = ExtResource("1_qayxd")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1827751125]
+[node name="CannonRaycast" parent="Texture" unique_id=1416354037 instance=ExtResource("2_qlvt6")]
+rotation = 1.5707964
