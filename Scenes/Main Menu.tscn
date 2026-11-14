@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://b1el1obx07w7b" path="res://Assets/Quit.png" id="10_jgydl"]
 [ext_resource type="Script" uid="uid://nx7fbfvbwnps" path="res://Scripts/Main Menu/quit.gd" id="11_p2sjk"]
 [ext_resource type="Script" uid="uid://c2c13o5ubiscw" path="res://Scripts/Main Menu/camera_2d.gd" id="11_tbdrc"]
+[ext_resource type="AudioStream" uid="uid://4s6ipacbdyh0" path="res://Assets/good..._.mp3" id="12_3hb06"]
+[ext_resource type="Script" uid="uid://bxewkoe51eecl" path="res://Scenes/audio_stream_player.gd" id="13_ns28u"]
 
 [node name="Buttons" type="Control" unique_id=1158101911]
 layout_mode = 3
@@ -110,6 +112,11 @@ offset_right = 1280.0
 offset_bottom = 720.0
 mouse_filter = 2
 texture = ExtResource("3_3hb06")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1125405747]
+stream = ExtResource("12_3hb06")
+autoplay = true
+script = ExtResource("13_ns28u")
 
 [connection signal="pressed" from="play" to="play" method="_on_pressed"]
 [connection signal="pressed" from="quit" to="quit" method="_on_pressed"]

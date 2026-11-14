@@ -1,0 +1,19 @@
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::1f293303842a96b0b07485fd083f2b2b::1794656103::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::7a45b84d0c3e8392f86b5040f4d236af::1794656103::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn::e31097b24c57028067cfe84e7632dd34::1794656103::res://.godot/exported/133200997/export-f17cdb592963b4d3f609d8b86d4cd429-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::5946a9a55ceff988ba46e7f734ff0538::1794656103::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://Assets/Dialogue/balloon.tscn::21a158dcfbc4a70a2bfdca6ee25af539::1794656102::res://.godot/exported/133200997/export-a3f501748366c431a1ba4c09d5641a0f-balloon.scn
+res://Scenes/ana's_photo.tscn::3bc0d4791ab2284f2ef03cf91fd3d6bc::1794656295::res://.godot/exported/133200997/export-4617613d5855b84df29c3653bd861b7c-ana's_photo.scn
+res://Scenes/bullet.tscn::f6d0a93b6e06236ea76ab2041325e264::1794642330::res://.godot/exported/133200997/export-ebb3521b4f0ab2fc80eef1183e18e924-bullet.scn
+res://Scenes/cannon.tscn::a8e37e9294aaba2fe82c69402c6903d4::1794644553::res://.godot/exported/133200997/export-c78373f77dab37d484d2a88735099eb1-cannon.scn
+res://Scenes/cannon_raycast.tscn::dbaf96d7a72edf3c72b834bbb14fc14f::1794641409::res://.godot/exported/133200997/export-bf53446212ab2c503ab8ac4116d82966-cannon_raycast.scn
+res://Scenes/cutscene.tscn::7965833cb17c3111aa835a20e375da7e::1794656176::res://.godot/exported/133200997/export-5787ea611e784a626bbd0ca76f0d7f9c-cutscene.scn
+res://Scenes/end.tscn::1e062249c8bcc30c5cb1a5fcf7510e2b::1794656616::res://.godot/exported/133200997/export-cb20730ebfdf6c4f6463dd6cf2207b2d-end.scn
+res://Scenes/loading_screen.tscn::bfd3ac477a3cc9fa415bdac8d62647bf::1794648762::res://.godot/exported/133200997/export-551652e13d0522a681dc9a1fecd338fa-loading_screen.scn
+res://Scenes/loading_screen_fade.tscn::5c27c875b4510f55b034d88950fa21d3::1794655932::res://.godot/exported/133200997/export-bdfd049511e39f0d572ef8eb90c874f9-loading_screen_fade.scn
+res://Scenes/Main Menu.tscn::7530b06759fd1d5ffbcfcf579e86ce38::1794657702::res://.godot/exported/133200997/export-dbb1d3f96082e281db35f94406ad00a5-Main Menu.scn
+res://Scenes/memories.tscn::5149ecdc84f71c850d6def1a71a61377::1794653812::res://.godot/exported/133200997/export-724b0a365be0f822b52033517af05827-memories.scn
+res://Scenes/memory_collection_scene.tscn::e4df55d60b8c37ac13f3ed06bbac2bd5::1794657651::res://.godot/exported/133200997/export-a00b7dcb161fdd3aa65e8466f7904bd1-memory_collection_scene.scn
+res://Scenes/memory_spawner.tscn::1ace21961074417387949af566b3cd05::1794624430::res://.godot/exported/133200997/export-07778a1206925980b084a2011e390c04-memory_spawner.scn
+res://Scenes/photo_button.tscn::d44b190dcbb6c5b3173948fa33ad4537::1794649307::res://.godot/exported/133200997/export-400680904edc39cc120bd2a0857cc8a7-photo_button.scn
+res://Scenes/photo_system.tscn::bf7c9a7be92f9e3cd12cbb5fb2dc9da1::1794655892::res://.godot/exported/133200997/export-beb1122deb7774e151d76ba3f1caab7a-photo_system.scn
