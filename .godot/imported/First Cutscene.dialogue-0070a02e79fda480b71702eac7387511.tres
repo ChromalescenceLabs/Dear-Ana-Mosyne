@@ -1,0 +1,129 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jlks8"]
+
+[resource]
+script = ExtResource("1_jlks8")
+using_states = PackedStringArray()
+cues = {
+"start": "1"
+}
+character_names = PackedStringArray("Narrator", "You")
+first_cue = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "cue"
+},
+"1": {
+&"character": "Narrator",
+&"id": "1",
+&"next_id": "2",
+&"static_id": "",
+&"text": "[speed=0.3]You lie on your bed, [$> changeScene(0,1)]awake. [$> changeScene(2,1)]The winds howl softly outside your window. [$> changeScene(0,2)]Lately, you've been feeling down in the dumps but can't figure out the reason why.",
+&"type": "dialogue"
+},
+"10": {
+&"character": "Narrator",
+&"id": "10",
+&"next_id": "11",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(11,10)]You let the sleep swallow you whole that night.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"function": "mainMenu",
+&"i": 3,
+&"type": &"function",
+&"value": Array[Array]([Array[Dictionary]([{
+&"i": 12,
+&"type": "parens_close"
+}])])
+}]),
+&"is_blocking": true
+},
+&"next_id": "12",
+&"type": "mutation"
+},
+"12": {
+&"id": "12",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"13": {
+&"id": "13",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"character": "Narrator",
+&"id": "2",
+&"next_id": "3",
+&"static_id": "",
+&"text": "[speed=0.3]You could not move. You have no reason to. Every little detail feels so bleak.",
+&"type": "dialogue"
+},
+"3": {
+&"character": "Narrator",
+&"id": "3",
+&"next_id": "4",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(3,1)]The trash bin is filled with bills. [$> changeScene(4,3)]The sink is filled with unwashed dishes. [$> changeScene(5,4)]You haven't eaten since yesterday.",
+&"type": "dialogue"
+},
+"4": {
+&"character": "You",
+&"id": "4",
+&"next_id": "5",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(0,5)]What's the point?",
+&"type": "dialogue"
+},
+"5": {
+&"character": "Narrator",
+&"id": "5",
+&"next_id": "6",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(6,0)]your phone buzzed. [$> changeScene(7,6)]It took all you have to reach for the desk beside you. [$> changeScene(8,7)]You open the phone and saw a single text from a person.",
+&"type": "dialogue"
+},
+"6": {
+&"character": "Narrator",
+&"id": "6",
+&"next_id": "7",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(9,8)]The name was blurred. You do not remember who the person is.",
+&"type": "dialogue"
+},
+"7": {
+&"id": "7",
+&"next_id": "8",
+&"static_id": "",
+&"text": "[speed=0.3]\"Hey, let's go out tomorrow\"",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"static_id": "",
+&"text": "[wait=2]",
+&"type": "dialogue"
+},
+"9": {
+&"character": "You",
+&"id": "9",
+&"next_id": "10",
+&"static_id": "",
+&"text": "[speed=0.3][$> changeScene(10,9)]*sob*",
+&"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "4.2.0"

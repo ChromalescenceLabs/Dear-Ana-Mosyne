@@ -45,11 +45,11 @@ position = Vector2(927, 138.99998)
 scale = Vector2(0.869807, 0.869807)
 texture = ExtResource("6_nl2gc")
 
-[node name="Parallax2D4" type="Parallax2D" parent="Parallax" unique_id=844233074]
-scale = Vector2(1.0000002, 1.0000002)
+[node name="Parallax2D4" type="Parallax2D" parent="Parallax/CanvasLayer" unique_id=844233074]
+scale = Vector2(1.1070383, 1.1070383)
 
-[node name="light" type="Sprite2D" parent="Parallax/Parallax2D4" unique_id=493011068]
-position = Vector2(55.101997, 35.229145)
+[node name="light" type="Sprite2D" parent="Parallax/CanvasLayer/Parallax2D4" unique_id=493011068]
+position = Vector2(-0.9033117, 1.806622)
 scale = Vector2(0.8965399, 0.8965399)
 texture = ExtResource("5_ef6yq")
 centered = false
@@ -92,7 +92,7 @@ offset_top = 427.0
 offset_right = 382.0
 offset_bottom = 552.0
 texture_normal = ExtResource("10_jgydl")
-texture_pressed = ExtResource("8_w2mqo")
+texture_pressed = ExtResource("10_jgydl")
 texture_hover = ExtResource("10_jgydl")
 script = ExtResource("11_p2sjk")
 

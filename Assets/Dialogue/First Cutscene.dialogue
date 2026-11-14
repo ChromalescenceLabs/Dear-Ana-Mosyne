@@ -1,0 +1,13 @@
+~ start
+Narrator: [speed=0.3]You lie on your bed, [$> changeScene(0,1)]awake. [$> changeScene(2,1)]The winds howl softly outside your window. [$> changeScene(0,2)]Lately, you've been feeling down in the dumps but can't figure out the reason why.
+Narrator: [speed=0.3]You could not move. You have no reason to. Every little detail feels so bleak. 
+Narrator: [speed=0.3][$> changeScene(3,1)]The trash bin is filled with bills. [$> changeScene(4,3)]The sink is filled with unwashed dishes. [$> changeScene(5,4)]You haven't eaten since yesterday.
+You: [speed=0.3][$> changeScene(0,5)]What's the point? 
+Narrator: [speed=0.3][$> changeScene(6,0)]your phone buzzed. [$> changeScene(7,6)]It took all you have to reach for the desk beside you. [$> changeScene(8,7)]You open the phone and saw a single text from a person. 
+Narrator: [speed=0.3][$> changeScene(9,8)]The name was blurred. You do not remember who the person is.
+[speed=0.3]"Hey, let's go out tomorrow"
+[wait=2]
+You: [speed=0.3][$> changeScene(10,9)]*sob*
+Narrator: [speed=0.3][$> changeScene(11,10)]You let the sleep swallow you whole that night.
+do mainMenu()
+=> END
