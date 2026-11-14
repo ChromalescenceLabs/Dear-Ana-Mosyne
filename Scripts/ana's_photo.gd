@@ -13,11 +13,4 @@ func set_mod():
 		unblur()
 
 func unblur():
-	get_tree().current_scene.set_deferred("process_mode", Node.PROCESS_MODE_DISABLED)
-	pic.visible = true
-	get_parent().open_pic.emit()
-	animation_player.play("unblur")
-	await animation_player.animation_finished
-	await get_tree().create_timer(2.0).timeout
-	
 	SceneLoader.load_scene("uid://du4ahm0whbvcw", 1.5)

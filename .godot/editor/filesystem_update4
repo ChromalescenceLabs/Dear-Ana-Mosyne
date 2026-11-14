@@ -1,8 +1,5 @@
-res://Scenes/memory_collection_scene.tscn
-res://Scripts/Shaders/photo_system.gdshader
 res://Scenes/ana's_photo.tscn
+res://Scripts/Shaders/photo_system.gdshader
 res://Scripts/ana's_photo.gd
-res://Scenes/photo_system.tscn
-res://Scripts/GlobalVars.gd
-res://Scripts/photo_system.gd
-res://Scenes/loading_screen_fade.tscn
+res://Scenes/end.tscn
+res://Scripts/end.gd

@@ -1,7 +1,7 @@
+RichTextLabel
+AnimationPlayer
 TextureRect
-AnimationPlayer
 ColorRect
-AnimationPlayer
 Control
 ParallaxLayer
 ParallaxBackground
