@@ -3,3 +3,4 @@ res://Scenes/memory_collection_scene.tscn
 res://Scripts/cannon_raycast.gd
 res://Scenes/cannon_raycast.tscn
 res://Scripts/cannon.gd
+res://Scripts/raycast_line.gd

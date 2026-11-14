@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://do2byq3wg0a3x"]
 
 [ext_resource type="PackedScene" uid="uid://bv4mpfhwatygv" path="res://Scenes/cannon.tscn" id="1_gxdbn"]
+[ext_resource type="Texture2D" uid="uid://ba8hjq7woqo2e" path="res://icon.svg" id="2_0g6pj"]
 
 [sub_resource type="Gradient" id="Gradient_xk8ji"]
 offsets = PackedFloat32Array(0)
@@ -15,6 +16,9 @@ colors = PackedColorArray(0.27129278, 0.70733774, 0.82789123, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_raa7b"]
 gradient = SubResource("Gradient_gxdbn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cuu35"]
+size = Vector2(112, 741)
 
 [node name="MemoryCollectionScene" type="Node2D" unique_id=1048546398]
 
@@ -34,3 +38,17 @@ texture = SubResource("GradientTexture2D_raa7b")
 
 [node name="Cannon" parent="." unique_id=768458813 instance=ExtResource("1_gxdbn")]
 position = Vector2(328, 370)
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=1801543114]
+
+[node name="StaticBody2D" type="RigidBody2D" parent="." unique_id=1341391940]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1861125659]
+position = Vector2(46, 360.5)
+shape = SubResource("RectangleShape2D_cuu35")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1942388795]
+position = Vector2(43, 358)
+scale = Vector2(0.859375, 5.78125)
+texture = ExtResource("2_0g6pj")
