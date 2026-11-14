@@ -1,3 +1,6 @@
+res://Scripts/spawn_pos.gd
+res://Scenes/memories.tscn
+res://Scenes/sprite_2d.gd
 res://Scenes/memory_collection_scene.tscn
 res://Scripts/Main Menu/texture_button.gd
 res://Scripts/Main Menu/quit.gd
@@ -10,5 +13,7 @@ res://Scripts/Main Menu/camera_2d.gd
 res://Scenes/loading_screen.tscn
 res://loading_screen.gdshader
 res://Scripts/loading_screen.gd
+res://Scenes/cannon_raycast.tscn
+res://Scripts/cannon.gd
+res://Scripts/cannon_raycast.gd
 res://Scenes/bullet.tscn
-res://Scenes/memories.tscn

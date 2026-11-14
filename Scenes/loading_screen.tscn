@@ -16,3 +16,15 @@ texture_repeat = 2
 material = SubResource("ShaderMaterial_ullcx")
 texture = ExtResource("3_1godw")
 centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=775057604]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1116218253]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
