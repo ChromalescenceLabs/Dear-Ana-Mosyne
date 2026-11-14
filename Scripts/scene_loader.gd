@@ -2,8 +2,8 @@ extends Node
 
 signal load_finished
 
-var loading_screen : PackedScene =preload("uid://m7stgxtbhwb3")
-const LOADING_SCREEN_FADE = preload("uid://m7stgxtbhwb3")
+var loading_screen : PackedScene =preload("uid://bnuk6xew2do5r")
+const loading_screen_fade = preload("uid://m7stgxtbhwb3")
 var loaded_resource : PackedScene
 var scene_path : String               
 var previous_scene_path : String       
