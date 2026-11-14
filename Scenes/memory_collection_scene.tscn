@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://do2byq3wg0a3x"]
 
 [ext_resource type="PackedScene" uid="uid://bv4mpfhwatygv" path="res://Scenes/cannon.tscn" id="1_gxdbn"]
+[ext_resource type="Texture2D" uid="uid://bfqvisf28sgrr" path="res://Assets/progress-bar-frame.png" id="2_8x4jn"]
+[ext_resource type="Texture2D" uid="uid://cpiu8tgtnfsbq" path="res://Assets/progress-bar-circle.png" id="3_bva5q"]
+[ext_resource type="Script" uid="uid://7shhtcctloi7" path="res://Scripts/cannoncooldown_progress_bar.gd" id="4_bva5q"]
 
 [sub_resource type="Gradient" id="Gradient_xk8ji"]
 offsets = PackedFloat32Array(0)
@@ -15,6 +18,42 @@ colors = PackedColorArray(0.27129278, 0.70733774, 0.82789123, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_raa7b"]
 gradient = SubResource("Gradient_gxdbn")
+
+[sub_resource type="Animation" id="Animation_8x4jn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [100.0]
+}
+
+[sub_resource type="Animation" id="Animation_bva5q"]
+resource_name = "cooldown"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [100.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i501o"]
+_data = {
+&"RESET": SubResource("Animation_8x4jn"),
+&"cooldown": SubResource("Animation_bva5q")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cuu35"]
 size = Vector2(31, 741)
@@ -41,6 +80,22 @@ texture = SubResource("GradientTexture2D_raa7b")
 [node name="Cannon" parent="." unique_id=768458813 instance=ExtResource("1_gxdbn")]
 position = Vector2(328, 370)
 rotation = -3.1415927
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=899647301]
+visible = false
+offset_left = 1205.0
+offset_top = 20.00003
+offset_right = 1333.0
+offset_bottom = 150.56003
+scale = Vector2(0.42, 0.42)
+value = 100.0
+fill_mode = 4
+texture_over = ExtResource("2_8x4jn")
+texture_progress = ExtResource("3_bva5q")
+script = ExtResource("4_bva5q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ProgressBar" unique_id=1437097555]
+libraries/ = SubResource("AnimationLibrary_i501o")
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=1801543114]
 

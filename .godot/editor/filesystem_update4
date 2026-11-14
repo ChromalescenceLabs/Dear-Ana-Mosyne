@@ -6,3 +6,4 @@ res://Scripts/cannon.gd
 res://Scripts/raycast_line.gd
 res://Scenes/bullet.tscn
 res://Scripts/bullet.gd
+res://Scripts/cannoncooldown_progress_bar.gd

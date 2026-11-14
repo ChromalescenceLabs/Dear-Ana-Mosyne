@@ -16,3 +16,6 @@ texture = ExtResource("1_qayxd")
 rotation = -1.5707964
 collide_with_areas = true
 color = Color(1, 1, 1, 1)
+
+[node name="CoolDown" type="Timer" parent="." unique_id=1490246009]
+one_shot = true

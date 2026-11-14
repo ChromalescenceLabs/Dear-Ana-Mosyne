@@ -3,14 +3,19 @@ extends Node2D
 var mouse_pos
 var is_clicked := false
 @onready var cannon_raycast: RayCast2D = $Texture/CannonRaycast
+@onready var cool_down: Timer = $CoolDown
 const BULLET = preload("uid://tgcfiha2l6xl")
+@onready var progress_bar: TextureProgressBar = $"../ProgressBar"
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Click"): aim()
 	elif event.is_action_released("Click"): unaim()
 	
 	if is_clicked:
-		if event.is_action_pressed("Shoot"):
+		if event.is_action_pressed("Shoot") and cool_down.is_stopped():
+			cool_down.start()
+			progress_bar.animation_player.speed_scale = cool_down.wait_time
+			progress_bar.play_anim()
 			var bullet = BULLET.instantiate()
 			bullet.global_position = global_position
 			bullet.rotation_degrees = rotation_degrees
